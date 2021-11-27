@@ -66,7 +66,7 @@ opponent_turn <- function(my_df, character){
     my_df[final_space] = character
     my_df
     } else {
-      space = sample(as.numeric(my_df[-which(my_df == "X" | my_df[1:] == "O")]), 1) # otherwise, choose random "space" from the remaining free "spaces"
+      space = sample(as.numeric(my_df[-which(my_df == "X" | my_df == "O")]), 1) # otherwise, choose random "space" from the remaining free "spaces"
       my_df[space] = character ## FIX PREVIOUS LINE; YOU FORGOT TO FACTOR ROW AND COLUMN SEPARATELY
     }
   }
